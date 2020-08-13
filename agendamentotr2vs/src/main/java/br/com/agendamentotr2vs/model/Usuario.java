@@ -18,7 +18,7 @@ public class Usuario {
 	private int id;
 	
 	@Column(name = "funcional", length = 9 )
-	private String fucional; 
+	private String funcional; 
 	
 	@Column(name = "nome", length = 100 )
 	private String nome;
@@ -41,10 +41,10 @@ public class Usuario {
 	
 	
 	
-	public Usuario(int id, String fucional, String nome, String racf, String senha) {
+	public Usuario(int id, String funcional, String nome, String racf, String senha) {
 		super();
 		this.id = id;
-		this.fucional = fucional;
+		this.funcional = funcional;
 		this.nome = nome;
 		this.racf = racf;
 		this.senha = senha;
@@ -58,11 +58,11 @@ public class Usuario {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFucional() {
-		return fucional;
+	public String getFuncional() {
+		return funcional;
 	}
-	public void setFucional(String fucional) {
-		this.fucional = fucional;
+	public void setFuncional(String funcional) {
+		this.funcional = funcional;
 	}
 	public String getNome() {
 		return nome;

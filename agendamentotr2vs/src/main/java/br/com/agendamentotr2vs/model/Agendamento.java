@@ -26,23 +26,23 @@ public class Agendamento {
 	
 	
 	@Column(name = "nome_cli", length = 100 )
-	private String nome_cli;
+	private String nomeCli;
 	
 	@Column(name = "email_cli", length = 100 )
-	private String email_cli;
+	private String emailCli;
 	
 	@Column(name = "celular_cli", length = 20 )
-	private String celular_cli;
+	private String celularCli;
 	
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
 	@Column(name="data_agendamento")
 	@Temporal(TemporalType.DATE)
-	private Date data_agendamento; 
+	private Date dataAgendamento; 
 	
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="hh:mm")
 	@Column(name="hora_agendamento")
 	@Temporal(TemporalType.TIME)
-	private Date hora_agendamento;
+	private Date horaAgendamento;
 	
 	@Column(name = "obs", length = 255 )
 	private String obs;
@@ -60,84 +60,171 @@ public class Agendamento {
 		super();
 	}
 
-	
-	
-	public Agendamento(int numSeq, String nome_cli, String email_cli, String celular_cli, Date data_agendamento,
-			Date hora_agendamento, String obs, Agencia agencia) {
+
+
+
+
+
+	public Agendamento(int numSeq, String nomeCli, String emailCli, String celularCli, Date dataAgendamento,
+			Date horaAgendamento, String obs, Agencia agencia) {
 		super();
 		this.numSeq = numSeq;
-		this.nome_cli = nome_cli;
-		this.email_cli = email_cli;
-		this.celular_cli = celular_cli;
-		this.data_agendamento = data_agendamento;
-		this.hora_agendamento = hora_agendamento;
+		this.nomeCli = nomeCli;
+		this.emailCli = emailCli;
+		this.celularCli = celularCli;
+		this.dataAgendamento = dataAgendamento;
+		this.horaAgendamento = horaAgendamento;
 		this.obs = obs;
 		this.agencia = agencia;
 	}
+
+
+
+
+
 
 	public int getNumSeq() {
 		return numSeq;
 	}
 
+
+
+
+
+
 	public void setNumSeq(int numSeq) {
 		this.numSeq = numSeq;
 	}
 
-	public String getNome_cli() {
-		return nome_cli;
+
+
+
+
+
+	public String getNomeCli() {
+		return nomeCli;
 	}
 
-	public void setNome_cli(String nome_cli) {
-		this.nome_cli = nome_cli;
+
+
+
+
+
+	public void setNomeCli(String nomeCli) {
+		this.nomeCli = nomeCli;
 	}
 
-	public String getEmail_cli() {
-		return email_cli;
+
+
+
+
+
+	public String getEmailCli() {
+		return emailCli;
 	}
 
-	public void setEmail_cli(String email_cli) {
-		this.email_cli = email_cli;
+
+
+
+
+
+	public void setEmailCli(String emailCli) {
+		this.emailCli = emailCli;
 	}
 
-	public String getCelular_cli() {
-		return celular_cli;
+
+
+
+
+
+	public String getCelularCli() {
+		return celularCli;
 	}
 
-	public void setCelular_cli(String celular_cli) {
-		this.celular_cli = celular_cli;
+
+
+
+
+
+	public void setCelularCli(String celularCli) {
+		this.celularCli = celularCli;
 	}
 
-	public Date getData_agendamento() {
-		return data_agendamento;
+
+
+
+
+
+	public Date getDataAgendamento() {
+		return dataAgendamento;
 	}
 
-	public void setData_agendamento(Date data_agendamento) {
-		this.data_agendamento = data_agendamento;
+
+
+
+
+
+	public void setDataAgendamento(Date dataAgendamento) {
+		this.dataAgendamento = dataAgendamento;
 	}
 
-	public Date getHora_agendamento() {
-		return hora_agendamento;
+
+
+
+
+
+	public Date getHoraAgendamento() {
+		return horaAgendamento;
 	}
 
-	public void setHora_agendamento(Date hora_agendamento) {
-		this.hora_agendamento = hora_agendamento;
+
+
+
+
+
+	public void setHoraAgendamento(Date horaAgendamento) {
+		this.horaAgendamento = horaAgendamento;
 	}
+
+
+
+
+
 
 	public String getObs() {
 		return obs;
 	}
 
+
+
+
+
+
 	public void setObs(String obs) {
 		this.obs = obs;
 	}
+
+
+
+
+
 
 	public Agencia getAgencia() {
 		return agencia;
 	}
 
+
+
+
+
+
 	public void setAgencia(Agencia agencia) {
 		this.agencia = agencia;
 	}
+
+	
+	
+	
 	
 	
 	

@@ -25,15 +25,13 @@ public class Agencia {
 	@Column(name = "nome_agencia", length = 100 )
 	private String nome_agencia;
 	
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="hh:mm")
-	@Column(name="hora_inicio")
-	@Temporal(TemporalType.TIME)
-	private Date hora_inicio;
 	
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="hh:mm")
+	@Column(name="hora_inicio")
+	private int hora_inicio;
+	
+	
 	@Column(name="hora_fim")
-	@Temporal(TemporalType.TIME)
-	private Date hora_fim;
+	private int hora_fim;
 
 	
 	
@@ -47,7 +45,15 @@ public class Agencia {
 		super();
 	}
 
-	public Agencia(int id, String nome_agencia, Date hora_inicio, Date hora_fim) {
+
+
+
+
+
+
+
+
+	public Agencia(int id, String nome_agencia, int hora_inicio, int hora_fim) {
 		super();
 		this.id = id;
 		this.nome_agencia = nome_agencia;
@@ -55,37 +61,102 @@ public class Agencia {
 		this.hora_fim = hora_fim;
 	}
 
+
+
+
+
+
+
+
+
 	public int getId() {
 		return id;
 	}
+
+
+
+
+
+
+
+
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
+
+
+
+
+
+
+
+
 	public String getNome_agencia() {
 		return nome_agencia;
 	}
+
+
+
+
+
+
+
+
 
 	public void setNome_agencia(String nome_agencia) {
 		this.nome_agencia = nome_agencia;
 	}
 
-	public Date getHora_inicio() {
+
+
+
+
+
+
+
+
+	public int getHora_inicio() {
 		return hora_inicio;
 	}
 
-	public void setHora_inicio(Date hora_inicio) {
+
+
+
+
+
+
+
+
+	public void setHora_inicio(int hora_inicio) {
 		this.hora_inicio = hora_inicio;
 	}
 
-	public Date getHora_fim() {
+
+
+
+
+
+
+
+
+	public int getHora_fim() {
 		return hora_fim;
 	}
 
-	public void setHora_fim(Date hora_fim) {
+
+
+
+
+
+
+
+
+	public void setHora_fim(int hora_fim) {
 		this.hora_fim = hora_fim;
 	}
+
 	
 	
 	
